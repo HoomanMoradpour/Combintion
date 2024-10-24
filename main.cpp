@@ -2,25 +2,25 @@
 #include <QChar>
 #include <QApplication>
 #include <QThread>
-#include "DistanceSensor.h"
+//#include "DistanceSensor.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    DistanceSensor sensor;
-    if (!sensor.initialize()) {
-        return -1; // Initialization failed
-    }
+   // DistanceSensor sensor;
+   // if (!sensor.initialize()) {
+   //     return -1; // Initialization failed
+   // }
 
-    while (true) {
-        double distance = sensor.getDistance();
-        qDebug() << "Measured Distance =" << distance << "cm";
-        QThread::sleep(1); // Sleep for 1 second
-    }
+   // while (true) {
+   //     double distance = sensor.getDistance();
+   //     qDebug() << "Measured Distance =" << distance << "cm";
+    //    QThread::sleep(1); // Sleep for 1 second
+   // }
 
-    sensor.cleanup();
-    return a.exec();
+   // sensor.cleanup();
+   // return a.exec();
 
 
 
